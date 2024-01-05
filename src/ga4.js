@@ -1,5 +1,4 @@
 import gtag from "./gtag";
-import format from "./format";
 
 /*
 Links
@@ -417,13 +416,13 @@ export class GA4 {
       // Required Fields
       const fieldObject = {
         hitType: "event",
-        eventCategory: format(category),
-        eventAction: format(action),
+        eventCategory: category,
+        eventAction: action,
       };
 
       // Optional Fields
       if (label) {
-        fieldObject.eventLabel = format(label);
+        fieldObject.eventLabel = label;
       }
 
       if (typeof value !== "undefined") {
